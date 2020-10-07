@@ -1,0 +1,221 @@
+
+Filly{
+	background-color: rgb(213, 219, 219 );/* setting background color*/
+	
+}
+/* Styling ShopDetail Element */
+ShopDetail{
+	display: block; 
+	border: 1px solid black; 
+	padding:20px 50px 50px 0px; 
+	background-color:#0D284C  ;
+	width:95%;
+	height:210px;
+	text-align :left;
+	color: RGB(144, 12, 63);
+	font-family:Matura MT Script Capitals;
+	font-size:20pt;
+	margin-left:10px;
+	text-align:right;
+	position:relative;
+ }
+ /*Inserting and displaying a logo*/
+	Logo{
+	width:60%;
+	height: 200px;
+	background:url(logo.png);
+	background-size: 100%;
+ 	background-repeat: no-repeat;/*logo won't repeat*/ 
+ 	position: absolute;
+ 	left: 50px;
+ 	top:50px;
+}
+ 
+ 
+ /* Setting font=Size and font family for shopname*/
+ShopName {
+	 font-family:Matura MT Script Capitals;
+	 font-size:30pt ;
+	 padding-bottom:20px;
+ }
+ 
+ /*Displaying address telephone numberemail and website in list with no list style-type*/
+Address, TelephoneNumber, Email, Website{
+	display:list-item;
+	list-style-type:none;
+	
+}
+
+
+
+/* display of Vehicle is flex . we have set background-color, font-size, font-family, font-weight, font-color and margin for Vehicle*/
+Vehicle {display:flex;
+	background-color : #D1F2EB  ;/*#FCF3CF #EAFAF1 ;*/
+	margin:30px 150px 30px 150px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:15pt;
+	font-weight:bold;
+	color:rgb(100, 30, 22 ) ;
+ }
+
+
+ 
+	
+OverView {display:block;
+	padding-top:50px;
+	padding-bottom:50px;
+	text-align:Center;
+	border: 5px solid black;
+	flex:1;
+	order:1;
+}
+
+ 
+VehicleSpecification {display:block;
+	padding:50px 50px 25px 50px;
+	text-align:left;
+	border: 2px solid black;
+	flex:1;
+	order:2;
+	
+}
+
+
+
+
+BrandName, Manufacturer, Quantity, Price, Seats{
+	display:list-item;
+	list-style-type:none;
+}
+
+
+
+ModelName{
+	display:block;
+	color:rgb(46, 64, 83  );
+	font-size:30pt;
+	font-family:Forte, Courier
+	
+}
+
+Engine {display:block;
+
+}
+
+EngineType,Displacement,MaxPower,MaxTorque{
+	display:list-item;
+	list-style-type:none;
+}
+
+
+Fuel {display:block;
+}
+
+Color{
+display:block;	
+}
+
+Transmission{
+display:block;	
+}
+Dimension{
+	display:block;
+}
+
+FuelType,FuelCapacity,Mileage{
+	display:list-item;
+	list-style-type:none;
+	
+}
+
+color{display:block;
+}
+
+Dimension{
+	display:block;
+}
+
+Exterior, Interior{
+		display:list-item;
+		list-style-type:none;
+}
+
+Brand::before{
+	content: "Brand: ";
+}
+
+Category::before{
+	content: "Category: ";
+}
+
+Quantity::before{
+	content: "quantity: ";
+}
+Price::before{
+	content: "Price: $";
+}
+
+Seats::before{
+	content: "Seats: ";
+}
+
+EngineType::before{
+	content: "Engine Type: ";
+}
+
+
+Displacement::before{
+	content: "Displacement: ";
+}
+
+
+MaxPower::before{
+	content: "MaxPower: ";
+}
+
+
+MaxTorque::before{
+	content: "MaxTorque: ";
+}
+
+
+FuelType::before{
+	content: "FuelType: ";
+}
+
+
+FuelCapacity::before{
+	content: "FuelCapacity: ";
+}
+
+
+Mileage::before{
+	content: "Mileage: ";
+}
+
+Description::before{
+	content: "Description: ";
+	
+}
+
+Dimension::before{
+	content: "dimension: ";
+	
+}
+
+Transmission::before{
+	content: "Transmission: ";
+}
+
+Exterior::before{
+	content: "Exterior color: ";
+}
+
+Interior::before{
+	content: "Interior color: ";
+	
+}
+
+Manufacturer::before{
+	content: "Manufacturer: "
+}

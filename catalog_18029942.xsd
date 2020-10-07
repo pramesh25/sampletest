@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<!-- root element-->
+	<xs:element name="Filly">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="ShopDetail"/>
+				<xs:element ref="Vehicle" minOccurs="1" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<!--For ShopDetail is Child element of Filly(root)-->
+	<xs:element name="ShopDetail">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="ShopName" minOccurs="1" maxOccurs="unbounded"/>
+				<xs:element ref="Address" minOccurs="1" maxOccurs="unbounded"/>
+				<xs:element ref="TelephoneNumber" minOccurs="1" maxOccurs="unbounded"/>
+				<xs:element ref="Email" minOccurs="0" maxOccurs="1"/><!--Optional data-->
+				<xs:element ref="Website" minOccurs="1" maxOccurs="unbounded"/>
+				<xs:element ref="Logo"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<!-- Address is child element of ShopDetail -->
+	<xs:element name="Address">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="city" minOccurs="1" maxOccurs="unbounded"/>
+				<xs:element ref="street" minOccurs="1" maxOccurs="unbounded"/>
+				<xs:element ref="Zip" minOccurs="1" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	
+	<!-- Vehicle is Child element of Filly(root) -->
+	<xs:element name="Vehicle">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="OverView" minOccurs="1" maxOccurs="unbounded"/>
+				<xs:element ref="VehicleSpecification" minOccurs="1" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute ref="releaseYear"/>
+			<xs:attribute ref="ItemNumber"/>
+		</xs:complexType>
+	</xs:element>
+	
+	<!-- Website is child of shopDetail -->
+	<xs:element name="Website">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:string">
+					<xs:attribute ref="type"/>
+				</xs:extension>
+			</xs:simpleContent>
+	</xs:complexType>
+	</xs:element>
+
+	
+
+	<!--Overview is Child element of Vehicle -->
+	<xs:element name="OverView">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="ModelName" minOccurs="1" maxOccurs="unbounded"/>
+				<xs:element ref="Brand" minOccurs="1" maxOccurs="unbounded"/>
+				<xs:element ref="Manufacturer" minOccurs="0" maxOccurs="unbounded"/><!--optional data -->
+				<xs:element ref="Category" minOccurs="1" maxOccurs="unbounded"/>	
+				<xs:element ref="Quantity" minOccurs="1" maxOccurs="unbounded"/>
+				<xs:element ref="Price" minOccurs="1" maxOccurs="unbounded"/>
+				<xs:element ref="Seats" minOccurs="1" maxOccurs="unbounded"/>
+				<xs:element ref="Description" minOccurs="1" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<!-- Dimension is child of VehicleSpecification-->
+	<xs:element name="Dimension">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="OverallLength" minOccurs="1" maxOccurs="unbounded"/>
+				<xs:element ref="OverallWidth" minOccurs="1" maxOccurs="unbounded"/>
+				<xs:element ref="OverallHeight" minOccurs="1" maxOccurs="unbounded"/>
+				<xs:element ref="Wheelbase" minOccurs="1" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	
+
+	<!-- VehicleSpecification is child element of Vehicle-->
+	<xs:element name="VehicleSpecification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Engine" minOccurs="1" maxOccurs="unbounded"/>
+				<xs:element ref="Fuel" minOccurs="1" maxOccurs="unbounded"/>
+				<xs:element ref="Color" minOccurs="1" maxOccurs="unbounded"/>
+				<xs:element ref="Transmission" minOccurs="1" maxOccurs="unbounded"/>
+				<xs:element ref="Dimension" minOccurs="1" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+		<!-- Price is child of Overview -->
+	<xs:element name="Price">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:string">
+					<xs:attribute ref="currency"/>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+
+	<!-- Engine is child element of VehicleSpecification -->
+	<xs:element name="Engine">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="EngineType" minOccurs="1" maxOccurs="unbounded"/>
+				<xs:element ref="Displacement" minOccurs="0" maxOccurs="unbounded"/><!-- optional data -->
+				<xs:element ref="MaxPower" minOccurs="0" maxOccurs="unbounded"/><!-- optional data -->
+				<xs:element ref="MaxTorque" minOccurs="0" maxOccurs="unbounded"/><!-- optional data -->
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<!-- Fuel is Child Element of VehicleSpecification -->
+	<xs:element name="Fuel">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="FuelType" minOccurs="1" maxOccurs="unbounded"/>
+				<xs:element ref="FuelCapacity" minOccurs="0" /><!---optional-->
+				<xs:element ref="Mileage" minOccurs="0" /><!--optional-->
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<!-- Color is child element of VehicleSpecification-->
+	<xs:element name="Color">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Exterior" minOccurs="1" maxOccurs="unbounded"/>
+				<xs:element ref="Interior" minOccurs="1" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	
+	<!-- Displacement is child of Engine-->
+	<xs:element name="Displacement">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension  base="xs:string">
+					<xs:attribute ref="unit"/>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+
+	<!-- Maxpower is child of Engine-->
+	<xs:element name="MaxPower">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension  base="xs:string">
+					<xs:attribute ref="unit"/>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+
+	<!-- MaxpTorque is child of Engine-->
+	<xs:element name="MaxTorque">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension  base="xs:string">
+					<xs:attribute ref="unit"/>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+
+	<!-- Restriction of fuel type 
+	fuel type can only be of Diesel or Gasoline or hybrid or electric
+	-->
+	<xs:element name="FuelType">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:pattern value="Diesel|Gasoline|hybrid|Electric"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	
+
+	<!--declaring global element name and type -->
+	<xs:element name="ShopName" type="xs:string"/>
+	<xs:element name="TelephoneNumber" type="xs:positiveInteger"/>
+	<xs:element name="Email" type="xs:string"/>
+	<xs:element name="city" type="xs:string"/>
+	<xs:element name="street" type="xs:string"/>
+	<xs:element name="Zip" type="xs:positiveInteger"/>
+	<xs:element name="Logo"/>
+	<xs:element name="ModelName" type="xs:string"/>
+	<xs:element name="Brand" type="xs:string"/>
+	<xs:element name="Manufacturer" type="xs:string"/>
+	<xs:element name="Category" type="xs:string"/>
+	<xs:element name="Description" type="xs:string"/>
+	<xs:element name="Quantity" type="xs:positiveInteger"/>
+	<xs:element name="Seats" type="xs:positiveInteger"/>
+	<xs:element name="Transmission" type="xs:string"/>
+	<xs:element name="EngineType" type="xs:string"/>
+	<xs:element name="FuelCapacity" type="xs:positiveInteger"/>
+	<xs:element name="Mileage" type="xs:positiveInteger"/>
+	<xs:element name="Exterior" type="xs:string"/>
+	<xs:element name="Interior" type="xs:string"/>
+	<xs:element name="OverallLength" type="xs:string"/>
+	<xs:element name="OverallHeight" type="xs:string"/>
+	<xs:element name="OverallWidth" type="xs:string"/>
+	<xs:element name="Wheelbase" type="xs:string"/>
+
+	<!-- declaring global attribute and their datatype-->
+	<xs:attribute name="currency" type="xs:string"/>
+	<xs:attribute name="ItemNumber" type="xs:integer"/>
+	<xs:attribute name="unit" type="xs:string"/>
+	<xs:attribute name="type" type="xs:string"/>
+	<xs:attribute name="releaseYear" type="xs:int"/>
+	
+</xs:schema> 

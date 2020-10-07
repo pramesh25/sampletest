@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="catalog_18029942.css"?> 
+<!--This is a webpage develop using xml -->
+<!--Filly is the name of our  Vehicle shop and our root element-->
+<Filly xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
+	xs:noNamespaceSchemaLocation="catalog_18029942.xsd">
+
+	<!--  shopdetail provide information about this shop element contain many child element ShopName,Address,TelephoneNumber,logo and website -->
+	<ShopDetail>
+		<ShopName>Filly Motors</ShopName>	
+		<Address> <!-- Address element contain some child element city street and zip -->
+			<city>Kathmandu</city>
+			<street>balwatar</street>
+			<Zip>44616</Zip>
+		</Address>
+		<TelephoneNumber>9851250079</TelephoneNumber>
+		<Email>fillymotor@gmail.com</Email> <!-- optional -->
+		<Website type="URL">www.fillymotors.com</Website> 
+		<Logo/>
+	</ShopDetail>
+	
+	<!-- There are two child element of Vehicle overview and specification  -->
+	<Vehicle releaseYear="2018" ItemNumber="2536">
+		<!-- Overview is a child class of Vehicle in this we give a brief information about the car some element that defines it area ModelName, Brand, Manufacturer
+		Description, Quantity, Price and Seats-->
+		<OverView>
+			<ModelName>CRETA</ModelName>
+			<Brand>Hyundai</Brand>
+			<Manufacturer>Hyundai Motor Company</Manufacturer><!--optional-->
+			<Category>SUV</Category>
+			<Quantity>10</Quantity>
+			<Price currency="$">25000</Price>
+			<Seats>5</Seats>
+			<Description>It is a subcompact crossover produced by South korean manufacturer hyundai.
+			It have a form of SUV. It comes with engne of 1.52 u2 DRDi with 6-Speed Manual transmission.</Description>
+		</OverView>
+		 
+		 <!--VechileSpecification is a child of Vechile . It contain Engine,Fuel, Color , 
+			Transmission and Dimension element-->
+		<VehicleSpecification>
+			<Engine><!-- Engine contain information of engine of car with element EngineType, 
+			Displacement, MaxPowerand MaxTorque -->
+				<EngineType>1.5 u2 DRDi</EngineType>
+				<Displacement unit="cc">1493</Displacement><!--Optional -->
+				<MaxPower unit="ps/rpm">115/4000</MaxPower><!--	Optional -->
+				<MaxTorque unit="kg.m/rmp">25.5/1500-2750</MaxTorque><!-- Optional-->
+			</Engine>
+			<Fuel><!--Give desription of fuel with element FuelType, FuelCapacity, Mileage. FuelCapacity 
+			and Mileage are optional Element -->
+				<FuelType>Diesel</FuelType>
+				<FuelCapacity>50</FuelCapacity><!-- optional -->
+				<Mileage>15</Mileage><!-- optional -->
+			</Fuel>
+			
+			<Color><!-- Give information about Color of the car with element Exterior and Interior. -->
+				<Exterior>Grey</Exterior>
+				<Interior>Brown</Interior>
+			</Color>
+			
+			<Transmission>6-Speed Manual</Transmission>
+			<Dimension><!-- Give information about Dimension of an car with element OverallLength, OverallWidth, 
+			OverallHeight, Wheelbase -->
+			<OverallLength>4300mm,</OverallLength> 
+			<OverallWidth>1790mm,</OverallWidth>			
+			<OverallHeight>1635mm,</OverallHeight>
+			<Wheelbase>2640mm</Wheelbase>
+			</Dimension>
+		</VehicleSpecification>
+	</Vehicle>
+	<!--new item -->
+	
+	<Vehicle releaseYear="2019" ItemNumber="25398">
+		<!-- Overview is a child class of Vehicle in this we give a brief information about the 
+		car some element that defines it area ModelName, Brand, Manufacturer Description, Quantity, Price and Seats-->
+		
+		<OverView>
+			<ModelName>Jepp Grand Cherokee</ModelName>
+			<Brand>Jeep</Brand>
+			<!-- <Manufacturer></Manufacturer> optional-->
+			<Category>SUV</Category>
+			<Quantity>11</Quantity>
+			<Price currency="$">51222</Price>
+			<Seats>5</Seats>
+			<Description>Jeep is one of the popular american brand.It have a full form suv size. It have engine of 3.0 CRD V6 with 8-Speed Automatic transmission.</Description>
+		</OverView>
+		
+		
+		<VehicleSpecification>
+			
+			<Engine>
+				<EngineType>3.0 CRD V6</EngineType>
+				<Displacement unit="cc">2988</Displacement>
+				<MaxPower unit="ps/rpm">243/5500</MaxPower>
+				<MaxTorque unit="kg.m/rmp">569/3000</MaxTorque>
+			</Engine>
+			<Fuel>
+				<FuelType>Gasoline</FuelType>
+				<FuelCapacity>50</FuelCapacity><!-- optional -->
+				<Mileage>20</Mileage><!-- optional -->
+			</Fuel>
+			
+			
+			<Color>
+				<Exterior>Lunar Silver Metallic</Exterior>
+				<Interior>Black</Interior>
+			</Color>
+			
+			<Transmission>8-Speed Automatic</Transmission>
+			<Dimension>
+			<OverallLength>4300mm, </OverallLength> 
+			<OverallWidth>1790mm, </OverallWidth>			
+			<OverallHeight>1635mm, </OverallHeight>
+			<Wheelbase>2610mm</Wheelbase>
+			</Dimension>
+		</VehicleSpecification>
+	</Vehicle>
+	
+	
+	<Vehicle releaseYear="2020" ItemNumber="56">
+		<OverView>
+			<ModelName>Honda Civic</ModelName>
+			<Brand>Honda</Brand>
+			<Manufacturer>honda motor company</Manufacturer><!--optional-->
+			<Category>Sedan</Category>
+			<Quantity>7</Quantity>
+			<Price currency="$">19000</Price>
+			<Seats>5</Seats>
+			<Description>Honda Civic is line of car manufacturer by japanese brand Honda. It comes with 1.6 R16B engine and 6 speed manual transmission.</Description>
+		</OverView>
+		
+		<VehicleSpecification>
+		
+			<Engine>
+				<EngineType>1.6 R16B</EngineType>
+				<Displacement unit="cc">1597</Displacement>
+				<MaxPower unit="ps/rpm">125/6500</MaxPower>
+				<MaxTorque unit="kg.m/rmp">138/4200</MaxTorque>
+			</Engine>
+			<Fuel>
+				<FuelType>hybrid</FuelType>
+				<FuelCapacity>50</FuelCapacity><!-- optional -->
+				<Mileage>30</Mileage><!-- optional -->
+			</Fuel>
+			
+			<Color>
+				<Exterior>gray</Exterior>
+				<Interior>brown</Interior>
+			</Color>
+			
+			<Transmission>CVT-7 automatic, 6speed manual</Transmission>
+			
+			<Dimension>
+				<OverallLength>4640mm'</OverallLength> 
+				<OverallWidth>1285mm'</OverallWidth>			
+				<OverallHeight>1416mm'</OverallHeight>
+				<Wheelbase>2700mm</Wheelbase>
+			</Dimension>
+			
+		</VehicleSpecification>
+
+	</Vehicle>
+	
+	
+		<Vehicle releaseYear="2020" ItemNumber="79">
+		<OverView>
+			<ModelName>Tesla Model 3</ModelName>
+			<Brand>Tesla</Brand>
+			<Manufacturer>Tesla INC</Manufacturer><!--optional-->
+			<Category>Sedan</Category>
+			<Quantity>2</Quantity>
+			<Price currency="$">60000</Price>
+			<Seats>4</Seats>
+			<Description>Tesla Model 3 is an electric four-door sedan manufacturerd by American brand Tesla. 
+			It have Electric 74kwh engine with 1-speed fixed gear transmission </Description>
+		</OverView>
+		<VehicleSpecification>
+			
+			<Engine>
+				<EngineType>Electric 74kwh</EngineType>
+			<!--	<Displacement unit="cc"></Displacement>  optional-->
+			<!--	<MaxPower unit="ps/rpm"></MaxPower> optional-->
+			<!--	<MaxTorque unit="kg.m/rmp"></MaxTorque> optional--> 
+			</Engine>
+			<Fuel>
+				<FuelType>Electric</FuelType>
+				<!-- <FuelCapacity></FuelCapacity> optional -->
+				<!-- <Mileage></Mileage> optional -->
+			</Fuel>
+			
+			<Color>
+				<Exterior>White</Exterior>
+				<Interior>blue</Interior>
+			</Color>
+			
+			<Transmission>1-speed fixed gear</Transmission>
+			<Dimension>
+			<OverallLength>2880mm,</OverallLength> 
+			<OverallWidth>1850mm,</OverallWidth>			
+			<OverallHeight>1440mm,</OverallHeight>
+			<Wheelbase>2880mm</Wheelbase>
+			</Dimension>
+		</VehicleSpecification>
+	</Vehicle>
+	 
+	 	<Vehicle releaseYear="2020" ItemNumber="55">
+		<OverView>
+			<ModelName>Nissan Leaf</ModelName>
+			<Brand>Nissan</Brand>
+			<Manufacturer>Nissan Motors</Manufacturer><!--optional-->
+			<Category>Hatchback</Category>
+			<Quantity>3</Quantity>
+			<Price currency="$">40000</Price>
+			<Seats>4</Seats>
+			<Description>The Nissan leaf is manufacturer by japanese moter company Nissan. iT comes with Electric motors engine and single speed transmission </Description>
+		</OverView>
+		<VehicleSpecification>
+			
+			<Engine>
+				<EngineType>Electric motors</EngineType>
+				<Displacement unit="cc"></Displacement><!-- optional -->
+				<MaxPower unit="ps/rpm"></MaxPower><!-- optional -->
+				<MaxTorque unit="kg.m/rmp"></MaxTorque><!-- optional -->
+			</Engine>
+			<Fuel>
+				<FuelType>Electric</FuelType>
+			<!--	<FuelCapacity></FuelCapacity> optional -->
+			<!--	<Mileage></Mileage> optional -->
+			</Fuel>
+			
+			<Color>
+				<Exterior>white</Exterior>
+				<Interior>black</Interior>
+			</Color>
+			<Transmission>Single-Speed</Transmission>
+			<Dimension>
+			<OverallLength>4445mm,</OverallLength> 
+			<OverallWidth>1770mm,</OverallWidth>			
+			<OverallHeight>1550mm,</OverallHeight>
+			<Wheelbase>2700mm</Wheelbase>
+			</Dimension>
+		</VehicleSpecification>
+	</Vehicle>
+	 
+		<Vehicle releaseYear="2020" ItemNumber="78">
+		<OverView>
+			<ModelName>BMW M8</ModelName>
+			<Brand>BMW</Brand>
+			<Manufacturer>BMW</Manufacturer><!--optional-->
+			<Category>Convertible</Category>
+			<Quantity>2</Quantity>
+			<Price currency="$">180000</Price>
+			<Seats>4</Seats>
+			<Description>BMW M8 is a high performance version of BMW 8 Series made by  German Auto Mobile Company BMW. It comes with 4.4Lite Twin-Turbo V8 engine and 8-Speed Automatic transmission.</Description>
+		</OverView>
+		<VehicleSpecification>
+			
+			<Engine>
+				<EngineType>4.4Lite Twin-Turbo V8</EngineType>
+				<Displacement unit="cc">4395</Displacement>
+				<MaxPower unit="ps/rpm">599/6000</MaxPower>
+				<MaxTorque unit="kg.m/rmp">590/5000</MaxTorque>
+			</Engine>
+			<Fuel>
+				<FuelType>Gasoline</FuelType>
+				<FuelCapacity>40</FuelCapacity><!-- optional -->
+				<Mileage>12</Mileage><!-- optional -->
+			</Fuel>
+			
+			<Color>
+				<Exterior>White Metallic</Exterior>
+				<Interior>Sakir Orange</Interior>
+			</Color>
+			
+			<Transmission>8-Speed Automatic</Transmission>
+			<Dimension>
+			<OverallLength>5000mm,</OverallLength> 
+			<OverallWidth>1945mm,</OverallWidth>			
+			<OverallHeight>1350mm,</OverallHeight>
+			<Wheelbase>2822mm</Wheelbase>
+			</Dimension>
+		</VehicleSpecification>
+	</Vehicle>
+	
+	
+	 	 
+</Filly>
